@@ -36,3 +36,28 @@
     transform: rotate(360deg);
   }
 }
+
+/* styles.css */
+.globe-container {
+  height: 70vh;
+  width: 100%;
+}
+
+.santa-location, .countdown {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 1rem;
+}
+
+.App {
+  background-color: transparent; /* Transparent background */
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
