@@ -3,18 +3,17 @@ import Globe from 'react-globe.gl';
 
 const SantaGlobe = ({ locations, setCurrentCity }) => {
   const globeRef = useRef();
-  const [santaPos, setSantaPos] = useState(locations[0]); // Santa's initial position
-  const [currentIndex, setCurrentIndex] = useState(0); // Track Santa's current city
+  const [santaPos, setSantaPos] = useState(locations[0]); 
+  const [currentIndex, setCurrentIndex] = useState(0); 
 
   useEffect(() => {
     const interval = setInterval(() => {
-      // Move to the next city
       const nextIndex = (currentIndex + 1) % locations.length;
       const nextCity = locations[nextIndex];
-      setSantaPos(nextCity); // Update Santa's position
-      setCurrentCity(nextCity.city); // Update the current city in the navbar
-      setCurrentIndex(nextIndex); // Update the index
-    }, 3000); // Move every 3 seconds
+      setSantaPos(nextCity); 
+      setCurrentCity(nextCity.city); 
+      setCurrentIndex(nextIndex); 
+    }, 3000); 
 
     return () => clearInterval(interval);
   }, [currentIndex, locations, setCurrentCity]);
@@ -24,7 +23,7 @@ const SantaGlobe = ({ locations, setCurrentCity }) => {
     startLng: loc.lng,
     endLat: locations[(idx + 1) % locations.length].lat,
     endLng: locations[(idx + 1) % locations.length].lng,
-    color: idx === currentIndex ? 'green' : 'red', // Highlight the current city line
+    color: idx === currentIndex ? 'green' : 'red', 
   }));
 
   return (

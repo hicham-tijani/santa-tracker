@@ -22,7 +22,6 @@ function App() {
 
   return (
     <div className="App">
-      {/* Navbar with Current City */}
       <div
         className="header-container"
         style={{
@@ -45,7 +44,6 @@ function App() {
           }}
         />
         <h1 className="text-3xl font-bold">Santa Tracker</h1>
-        {/* Current City */}
         <h2 style={{ marginLeft: '700px', fontSize: '1.2rem' }}>Currently in: {currentCity}</h2>
       </div>
 
